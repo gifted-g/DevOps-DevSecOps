@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  auth:
+    build: ./services/auth-service
+    ports:
+      - "8001:8080"
+  payment:
+    build: ./services/payment-service
+    ports:
+      - "8002:8080"
