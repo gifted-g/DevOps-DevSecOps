@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: logstorm
+  namespace: benchmark
+  labels:
+    app: logstorm
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: logstorm
+  template:
+    metadata:
+      labels:
+        app: logstorm
+    spec:
+      containers:
+      - name: logstorm
+        image: logstorm:latest
+        imagePullPolicy: Never
+        env:
+        - name: LOG_RATE
+          value: "400"
+        - name: LOG_DURATION
+          value: "300"
+        resources:
+          requests:
+            cpu: "250m"
+            memory: "128Mi"
+          limits:
+            cpu: "500m"
+            memory: "256Mi"
+      terminationGracePeriodSeconds: 5

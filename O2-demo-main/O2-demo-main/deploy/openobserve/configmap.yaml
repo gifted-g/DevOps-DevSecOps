@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: openobserve-config
+  namespace: openobserve
+data:
+  ZO_ROOT_USER_EMAIL: "root@benchmark.local"
+  ZO_ROOT_USER_PASSWORD: "BenchmarkPass123!"
+  ZO_DATA_DIR: "/data"
+  ZO_HTTP_PORT: "5080"
+  ZO_TELEMETRY: "false"
+  ZO_WEB_URL: ""
+  ZO_PROMETHEUS_ENABLED: "true"

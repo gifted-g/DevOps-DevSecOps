@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: opensearch-config
+  namespace: opensearch
+data:
+  opensearch.yml: |
+    cluster.name: opensearch-benchmark
+    node.name: opensearch-0
+    discovery.type: single-node
+    network.host: 0.0.0.0
+    plugins.security.disabled: true
+    bootstrap.memory_lock: false
+    OPENSEARCH_JAVA_OPTS: "-Xms1g -Xmx1g"
