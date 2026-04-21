@@ -1,73 +1,108 @@
-# MongoDB for Absolute Beginners 
+# DevSecOps-Zero-to-Hero
 
-This is a **complete beginner-friendly MongoDB tutorial**.  
-Even if you have **never written a single database query before**, you can follow along comfortably.
+## Day 1: The Mindset Shift & Threat Modeling
 
-The goal of this course is to explain MongoDB **in simple language**, with **short demos** and **real projects**, instead of heavy theory.
+**Focus**: Understanding the "Sec" in DevSecOps and planning before coding.
 
----
+### Concepts:
+- **What is DevSecOps?** (Shift Left vs. Shield Right)
+- **The 2026 Landscape**: AI-driven attacks vs. AI-driven defense
+- **Threat Modeling**: Using the STRIDE framework
 
-## 📌 What You Will Learn
+### Tool Spotlight:
+- OWASP Threat Dragon or PyTM
 
-This tutorial covers MongoDB from the ground up:
-
-- Relational vs Non-Relational Databases (in plain English)
-- Why MongoDB is used in modern applications
-- Core building blocks of MongoDB:
-  - Database
-  - Collection
-  - Document
-- Installing, setting up, and configuring MongoDB
-- Working with **MongoDB Compass (GUI)**
-- Using **MongoDB Atlas (Cloud Database)**
-- CRUD operations:
-  - Insert
-  - Read
-  - Update
-  - Delete
+### Hands-on Lab:
+- Perform a threat model for a simple 3-tier web application
 
 ---
 
-## 🛠️ Hands-On Projects
+## Day 2: DevSecOps for Git
 
-You will build **real-world projects** to understand how MongoDB is used in practice:
-
-### 1️⃣ DevOps Logs Explorer
-- Store application logs in MongoDB
-- Query logs by service, level, and time
-- Understand why MongoDB is great for semi-structured data
-
-### 2️⃣ MongoDB as a Vector Database (AI App)
-- Store embeddings in MongoDB
-- Perform vector search
-- Learn how MongoDB fits into AI & GenAI applications
-
----
-
-## 🎯 Who This Is For
-
-- Absolute beginners
-- Developers new to databases
-- SQL developers moving to NoSQL
-- Students & self-learners
-- Anyone building modern backend or AI applications
-
-No prior MongoDB or database knowledge is required.
+1. .gitignore  
+2. Native Git Pre-Commit Hooks (Custom Scripts)  
+3. Block commits with Gitleaks  
+4. Gitleaks -> Repository & History Scanning  
+5. Gitleaks in GitHub Actions  
+6. Branch Protection Rules  
+7. RBAC  
+8. Mandatory Reviews  
+9. CODEOWNERS  
+10. Dependabot  
 
 ---
 
-## ▶️ Video Tutorial
+## Day 3: IaC Security
 
-📺 **Watch the full course on YouTube:**  
-https://youtu.be/x1-naBN7e84
+### Concepts:
+- Best Practices
+- **IaC Scanning**: Catching misconfigured S3 buckets or open Security Groups before deployment
+- Secret Management with Vault
+
+### Tool Spotlight:
+- Gitleaks
+- Checkov
+- Vault
+
+### Hands-on Lab:
+- Scan a "less secure" Terraform repo
+- Implement HashiCorp Vault for dynamic secret injection
 
 ---
 
-## ⭐ Support
+## Day 4: Container Security
 
-If you find this helpful:
-- Star the repository ⭐
-- Share it with others
-- Subscribe to the YouTube channel
+**Focus**: Securing the ship (Docker) and the harbor (K8s).
 
-Happy Learning! 🚀
+### Concepts:
+- Distroless images and multi-stage builds
+- **Image Linting**: Finding "root" users and insecure instructions
+- **Kubernetes Admission Controllers** and Network Policies
+
+### Tool Spotlight:
+- Trivy (Image Scanning)
+- Hadolint (Docker Linting)
+
+### Hands-on Lab:
+- Scan a Docker image for CVEs
+- Deploy a "Secure-by-Default" Pod to a K8s cluster
+
+---
+
+## Day 5: Kubernetes Security
+
+**Focus**: 
+ 
+- Namespaces
+- RBAC
+- Network Policies
+- Kyverno
+- Secrets
+- External Secrets Operator
+
+---
+
+## Day 6: SAST, SCA and DAST
+**Focus**: Testing the running application for real-world exploits.
+
+### Concepts:
+- **SAST**
+- **SCA**
+- **DAST** (Dynamic Application Security Testing): Attacking the app like a hacker
+
+
+### Tool Spotlight:
+- SonarQube
+- OWASP ZAP (Automation)
+
+### Hands-on Lab:
+- Run an automated ZAP baseline scan against a Python application
+- Run SAST and SCA against a Python application
+
+---
+
+## Day 7: The Grand Finale – Building the Ultimate Pipeline
+
+**Focus**: Bringing it all together and the DevSecOps Career Roadmap.
+
+Refer - https://github.com/iam-veeramalla/Jerney
